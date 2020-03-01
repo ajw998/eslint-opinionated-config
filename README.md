@@ -1,0 +1,1 @@
+# Opinionated ESLint configurations
