@@ -15,8 +15,8 @@ British English style rules, where one would enclose quoted matters in single
 quotation marks. Special considerations must be made when using apostrophes.
 
 ```js
-const unsafe = 'I'm an unsafe string' # Unsafe
-const safe = 'I\'m a safe string' # Safe
+const unsafe = 'I'm an unsafe string' // Unsafe
+const safe = 'I\'m a safe string' // Safe
 ```
 
 The above problem may be adequately solved by using template literals. However,
@@ -36,6 +36,6 @@ Grandmaster, you will generally not phrase the question in such way: 'A
 programmer, he is?'. Instead, you will ask, 'Are you a programmer?'.
 
 ```js
-if ( 'yoda' === jediMaster ) { teach() }; # Error 
-if ( jediMaster === 'yoda' ) { teach() }; # Pass
+if ( 'yoda' === jediMaster ) { teach() }; // Error 
+if ( jediMaster === 'yoda' ) { teach() }; // Pass
 ```
