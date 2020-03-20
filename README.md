@@ -25,3 +25,17 @@ literals generally infer the need for string interpolation, multiline literals,
 or unescape quotes or apostrophes. Liberal use of template literal when
 wrapping ordinary string literals would therefore impact on code comprehension.
 
+### Reject Yoda conditions
+
+[Yoda conditions](https://en.wikipedia.org/wiki/Yoda_conditions) will throw an
+error as it makes code unreadable. It is counterintuitive and does not
+following traditional English syntax. Consider an average day-to-day
+conversation between two person where one enquires whether the other is a
+programmer. Unless you are the physical embodiment of the great Jedi
+Grandmaster, you will generally not phrase the question in such way: 'A
+programmer, he is?'. Instead, you will ask, 'Are you a programmer?'.
+
+```js
+if ( 'yoda' === jediMaster ) { teach() }; # Error 
+if ( jediMaster === 'yoda' ) { teach() }; # Pass
+```
