@@ -21,8 +21,8 @@ const safe = 'I\'m a safe string' // Safe
 
 The above problem may be adequately solved by using template literals. However,
 template literal should not be applied as a style rule, as the use of template
-literals generally infer the need for string interpolation, multiline literals,
-or unescape quotes or apostrophes. Liberal use of template literal when
+literals generally infer the need for string interpolation, multi-line literals,
+or un-escape quotes or apostrophes. Liberal use of template literal when
 wrapping ordinary string literals would therefore impact on code comprehension.
 
 ### Reject Yoda conditions
@@ -39,3 +39,45 @@ programmer, he is?'. Instead, you will ask, 'Are you a programmer?'.
 if ( 'yoda' === jediMaster ) { teach() }; // Error 
 if ( jediMaster === 'yoda' ) { teach() }; // Pass
 ```
+
+### Warn on unsorted Object keys
+
+Self-explanatory. It is preferable to sort object keys in alphabetical order to
+help developers search for specific keys. This, however, rests on the
+assumption that the developer is familiar with the content of the object, and
+hence why the linter will only warn the developer instead of outright banning
+it. Take the following example:
+
+```js
+// Mock object
+// This would throw a warning
+const obj = { 
+    type: 'select',
+	options: [ 'apples', 'pears', 'oranges' ],
+	multiple: true,
+	disabled: false,
+}
+```
+
+The example above shows a generated object that would be used as a function
+parameter for generating a `<select>` element completed with options.
+For new developers, it may be intuitive to think about the HTML element
+`type`, and think about the list of available `options`, followed by other
+functional requirements. 
+
+If we sort they keys:
+
+```js
+const obj = { 
+	disabled: false,
+	multiple: true,
+	options: [ 'apples', 'pears', 'oranges' ],
+    type: 'select',
+}
+```
+
+This might potentially impede on new developer's comprehension of the object,
+as it may be counter-intuitive to first consider whether a `select` element is
+disabled. However, this is beneficial in the long run. Sorted keys are also
+especially useful for large objects, enabling developers to do visual search
+easily. 
