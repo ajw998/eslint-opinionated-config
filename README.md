@@ -53,9 +53,9 @@ it. Take the following example:
 // This would throw a warning
 const obj = { 
     type: 'select',
-	options: [ 'apples', 'pears', 'oranges' ],
-	multiple: true,
-	disabled: false,
+    options: [ 'apples', 'pears', 'oranges' ],
+    multiple: true,
+    disabled: false,
 }
 ```
 
@@ -69,9 +69,9 @@ If we sort they keys:
 
 ```js
 const obj = { 
-	disabled: false,
-	multiple: true,
-	options: [ 'apples', 'pears', 'oranges' ],
+    disabled: false,
+    multiple: true,
+    options: [ 'apples', 'pears', 'oranges' ],
     type: 'select',
 }
 ```
