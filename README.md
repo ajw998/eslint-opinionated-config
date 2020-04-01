@@ -81,3 +81,29 @@ as it may be counter-intuitive to first consider whether a `select` element is
 disabled. However, this is beneficial in the long run. Sorted keys are also
 especially useful for large objects, enabling developers to do visual search
 easily. 
+
+### Disallow deleting variables
+
+Using `delete` on `var` leads to unexpected behaviour. Consider the following:
+
+```js
+var test = 1; // Declare a variable
+delete test;
+console.log(test) // 1
+```
+The variable is not deleted, even though the script's intention shows the
+contrary. This is because variables are not normally deletable.  If you declare
+`test` without `var`, however:
+
+```js
+test = 1; // Declare a property
+delete test;
+console.log(test) // test is undefined
+```
+
+The reason being that `test` is bound to the top level lexical environment,
+which in this case is global environment. Assigning `1` to `test` without using
+`var` would instead assign an object property to the global environment. Since
+properties in objects are deletable, `test` will be undefined.
+
+In strict mode, the parser will throw an error.
