@@ -22,7 +22,8 @@ module.exports = {
     },
     plugins: [
         'jest',
-        'no-use-extend-native'
+        'no-use-extend-native',
+        'unicorn',
     ],
     rules: {
         ...base,
