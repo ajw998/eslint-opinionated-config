@@ -5,5 +5,6 @@
  */
 
 module.exports = {
-    'unicorn/filename-case': ['warn', { case: 'camelCase' }]
+    'unicorn/better-regex': 'error',
+    'unicorn/filename-case': ['warn', { case: 'camelCase' }],
 };

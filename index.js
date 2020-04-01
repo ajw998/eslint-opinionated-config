@@ -4,6 +4,7 @@ const es6 = require('./es6');
 const jest = require('./jest');
 const node = require('./node');
 const style = require('./style');
+const unicorn = require ('./unicorn');
 const variables = require('./variables');
 
 module.exports = {
@@ -13,7 +14,6 @@ module.exports = {
         node: true,
     },
     extends: [
-        'plugin:unicorn/recommended',
         'plugin:node/recommended',
     ],
     parserOptions: {
@@ -31,6 +31,7 @@ module.exports = {
         ...jest,
         ...node,
         ...style,
+        ...unicorn,
         ...variables,
     }
 };
