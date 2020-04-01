@@ -5,5 +5,5 @@
  */
 
 module.exports = {
-
+    'unicorn/filename-case': ['warn', { case: 'camelCase' }]
 };
