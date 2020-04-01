@@ -1,8 +1,22 @@
 # Opinionated ESLint configurations
 
+## Installation
+
+Run `npm install @ajw998/eslint-config`
+
+In your `.eslintrc`, add the following:
+
+```js
+{ 
+    extends: '@ajw998/eslint-config'
+}
+```
+
 ## Teardown analysis 
 
-### Prefer single quotes `''` over `""` for strings
+### Style 
+
+#### Prefer single quotes `''` over `""` for strings
 
 In JavaScript, it is acceptable to wrap ordinary string literals in single or
 double quotes. However, many style guides would define their own preference for
@@ -25,7 +39,7 @@ literals generally infer the need for string interpolation, multi-line literals,
 or un-escape quotes or apostrophes. Liberal use of template literal when
 wrapping ordinary string literals would therefore impact on code comprehension.
 
-### Reject Yoda conditions
+#### Reject Yoda conditions
 
 [Yoda conditions](https://en.wikipedia.org/wiki/Yoda_conditions) will throw an
 error as it makes code unreadable. It is counterintuitive and does not
@@ -40,7 +54,7 @@ if ( 'yoda' === jediMaster ) { teach() }; // Error
 if ( jediMaster === 'yoda' ) { teach() }; // Pass
 ```
 
-### Warn on unsorted Object keys
+#### Warn on unsorted Object keys
 
 Self-explanatory. It is preferable to sort object keys in alphabetical order to
 help developers search for specific keys. This, however, rests on the
@@ -82,7 +96,9 @@ disabled. However, this is beneficial in the long run. Sorted keys are also
 especially useful for large objects, enabling developers to do visual search
 easily. 
 
-### Disallow deleting variables
+### Variables
+
+#### Disallow deleting variables
 
 Using `delete` on `var` leads to unexpected behaviour. Consider the following:
 
