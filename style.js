@@ -17,7 +17,7 @@ module.exports = {
     'no-ternary': 'off',
     'no-trailing-spaces': 'error',
     'prefer-object-spread': 'warn',
-    'sort-keys': 'warn', // Documentation needed
+    'sort-keys': 'warn',
     'sort-vars': 'warn', // Documentation needed
     yoda: ['error', 'never'],
 };
