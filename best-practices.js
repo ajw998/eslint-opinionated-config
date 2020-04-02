@@ -7,7 +7,7 @@
 module.exports = {
     'array-callback-return': ['error', { allowImplicit: true }],
     'block-scoped-var': 'error',
-    complexity: ['error', 5],
+    complexity: ['error', 10],
     curly: 'error',
     'default-case': 'error',
     'dot-notation': ['error', { allowKeywords: false }],
