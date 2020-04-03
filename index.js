@@ -13,9 +13,6 @@ module.exports = {
         jest: true,
         node: true,
     },
-    extends: [
-        'plugin:node/recommended',
-    ],
     parserOptions: {
         ecmaVersion: 2020,
         sourceType: 'module'
@@ -23,6 +20,7 @@ module.exports = {
     plugins: [
         'jest',
         'no-use-extend-native',
+        'node',
         'unicorn',
     ],
     rules: {
