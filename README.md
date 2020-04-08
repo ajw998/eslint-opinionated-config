@@ -98,7 +98,7 @@ easily.
 
 ### Variables
 
-#### Disallow deleting variables
+#### Disallow deleting variables (`no-delete-vars`)
 
 Using `delete` on `var` leads to unexpected behaviour. Consider the following:
 
@@ -123,3 +123,22 @@ which in this case is global environment. Assigning `1` to `test` without using
 properties in objects are deletable, `test` will be undefined.
 
 In strict mode, the parser will throw an error.
+
+#### Disallow early uses (`no-use-before-define`)
+
+Variables and functions declared using `var` are hoisted to the top of the
+scope. This can be confusing to read and creates messy code. This problem is
+indirectly covered by the `prefer-const` rule, which requires developers to use
+`let` and `const`, and will cause a `ReferenceError` to be thrown if the
+developer attempts to access a variable before it is declared.
+
+```js
+// Syntactically correct, but linter will throw an errors.
+// due to `prefer-const` and `no-use-before-define`.
+foo(); // Error
+function foo() { };
+
+// Syntactically incorrect. The interpretor will throw `ReferenceError`.
+bar();
+const bar = () => { };
+```
