@@ -14,9 +14,33 @@ In your `.eslintrc`, add the following:
 
 ## Teardown analysis 
 
+- [ES6](#ES6)
+
 - [Style](#style)
 
 - [Variables](#variables)
+
+### ES6
+
+#### No `super()` calls in non-derived classes (`constructor-super`)
+
+Calling `super()` in non-derived classes constructor will raise runtime error.
+
+#### Enforce consistent spacing when using spread operators (`rest-spread-spacing`)
+
+Rest and spread operator should always be together. This improves code
+readability. This style could be found consistently throughout examples
+provided by the original [TC-39
+proposal](https://github.com/tc39/proposal-object-rest-spread) and MDN
+examples.
+
+```js
+// Error
+const { x, y, ... z} = props;
+
+// Correct
+const { x, y, ...z } = props;
+```
 
 ### Style 
 
