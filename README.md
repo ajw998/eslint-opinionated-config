@@ -14,6 +14,10 @@ In your `.eslintrc`, add the following:
 
 ## Teardown analysis 
 
+- [Style](#style)
+
+- [Variables](#variables)
+
 ### Style 
 
 #### Prefer single quotes `''` over `""` for strings (`quotes`)
