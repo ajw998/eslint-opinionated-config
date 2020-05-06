@@ -26,6 +26,18 @@ In your `.eslintrc`, add the following:
 
 Calling `super()` in non-derived classes constructor will raise runtime error.
 
+#### Require use of template literals over string concatenation (`prefer-template`)
+
+Use template literals over string concatenation because we are not savages.
+
+```js
+// Error
+const string = 'Hello, ' + name + ' !';
+
+// Correct
+const string = `Hello, ${name} !`;
+```
+
 #### Enforce consistent spacing when using spread operators (`rest-spread-spacing`)
 
 Rest and spread operator should always be together. This improves code
