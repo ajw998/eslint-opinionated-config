@@ -16,6 +16,8 @@ In your `.eslintrc`, add the following:
 
 - [ES6](#ES6)
 
+- [Layout](#layout)
+
 - [Style](#style)
 
 - [Variables](#variables)
@@ -53,6 +55,15 @@ const { x, y, ... z} = props;
 // Correct
 const { x, y, ...z } = props;
 ```
+
+### Layout
+
+#### Enforce 4-spaces indentation
+
+Go read [this](https://softwareengineering.stackexchange.com/questions/57/tabs-versus-spaces-what-is-the-proper-indentation-character-for-everything-in-e).
+
+Bottom line is, use a worthy IDE/Text editor that does the work for you. It is
+honestly not worth fussing about.
 
 ### Style 
 
