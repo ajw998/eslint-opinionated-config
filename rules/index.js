@@ -13,7 +13,11 @@ module.exports = {
         jest: true,
         node: true,
     },
+    extends: ['plugin:react/recommended'],
     parserOptions: {
+        ecmaFeatures: {
+            jsx: true
+        },
         ecmaVersion: 2020,
         sourceType: 'module'
     },
@@ -21,6 +25,7 @@ module.exports = {
         'jest',
         'no-use-extend-native',
         'node',
+        'react',
         'unicorn',
     ],
     rules: {
