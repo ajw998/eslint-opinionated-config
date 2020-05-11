@@ -13,7 +13,10 @@ module.exports = {
         jest: true,
         node: true,
     },
-    extends: ['plugin:react/recommended'],
+    extends: [
+        'plugin:react/recommended',
+        'plugin:unicorn/recommended',
+    ],
     parserOptions: {
         ecmaFeatures: {
             jsx: true
