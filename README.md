@@ -20,6 +20,8 @@ In your `.eslintrc`, add the following:
 
 - [Style](#style)
 
+- [Comment](#comment)
+
 - [Variables](#variables)
 
 ### ES6
@@ -146,6 +148,26 @@ as it may be counter-intuitive to first consider whether a `select` element is
 disabled. However, this is beneficial in the long run. Sorted keys are also
 especially useful for large objects, enabling developers to do visual search
 easily. 
+
+### Comment
+
+#### Allow inline comments (`no-inline-comments`)
+
+In general, descriptive comments, multi-line, or prose-form comments should be
+placed before the code. However, there are cases where inline comments are
+useful in providing short and quick annotations on evaluated variables. 
+
+#### Warn on warning comments (`no-warning-comments`)
+
+This is dependent on the size of your project. Sometimes, it is not feasible
+for developers to fix all the issues or implement every details perfectly due
+to reasons being their control (e.g. time constraints, imperfect information
+etc.).
+
+An exception to the above rule are bugs. It is generally good software
+engineering practice to fix a bug as soon as you spot one. See ID Software's
+[programming principles](https://www.youtube.com/watch?v=KFziBfvAFnM) and the
+[Broken Window Theory](https://en.wikipedia.org/wiki/Broken_windows_theory)
 
 ### Variables
 
