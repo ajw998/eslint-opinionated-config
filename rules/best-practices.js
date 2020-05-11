@@ -60,9 +60,11 @@ module.exports = {
     // https://eslint.org/docs/rules/no-implicit-coercion
     'no-implicit-coercion': 'error',
 
+    // Disallow Implied eval()
     // https://eslint.org/docs/rules/no-implied-eval
     'no-implied-eval': 'error',
 
+    // Disallow this keywords outside of classes or class-like objects
     // https://eslint.org/docs/rules/no-implied-this
     'no-invalid-this': 'error',
 
@@ -94,9 +96,21 @@ module.exports = {
     // https://eslint.org/docs/rules/no-proto
     'no-proto': 'error',
 
+    // Disallow script urls
+    // https://eslint.org/docs/rules/no-script-url
     'no-script-url': 'error',
+
+    // Disallow use of the void operator
+    // https://eslint.org/docs/rules/no-void
     'no-void': 'error',
+
+
+    // Require using Error objects as Promise rejection reasons
+    // https://eslint.org/docs/rules/prefer-promise-reject-errors
     'prefer-promise-reject-errors': 'warn',
+
+    // Require radix parameter
+    // https://eslint.org/docs/rules/radix
     radix: 'error',
 
     // Disallow `async` if there is no `await` expression
