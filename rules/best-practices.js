@@ -33,25 +33,67 @@ module.exports = {
     // https://eslint.org/docs/rules/eqeqeq
     eqeqeq: ['error', 'always'],
 
+    // Disallow use of caller/callee
+    // https://eslint.org/docs/rules/no-caller
     'no-caller': 'error',
+
+    // Disallow lexical declarations in case/default clauses
+    // https://eslint.org/docs/rules/no-case-declarations
     'no-case-declarations': 'error',
+
+    // https://eslint.org/docs/rules/no-div-regex
     'no-div-regex': 'error',
+
+    // Disallow eval()
+    // https://eslint.org/docs/rules/no-eval
     'no-eval': 'error',
+
+    // Disallow Extending of Native Objects
+    // https://eslint.org/docs/rules/no-extend-native
     'no-extend-native': 'error',
+
+    // Disallow floating decimals
+    // https://eslint.org/docs/rules/no-floating-decimal
     'no-floating-decimal': 'error',
-    'no-implicit-coercion': 'error', // Documentation needed
+
+    // Disallow the type conversion with shorter notations
+    // https://eslint.org/docs/rules/no-implicit-coercion
+    'no-implicit-coercion': 'error',
+
+    // https://eslint.org/docs/rules/no-implied-eval
     'no-implied-eval': 'error',
+
+    // https://eslint.org/docs/rules/no-implied-this
     'no-invalid-this': 'error',
+
+    // Disallow labeled statements
+    // https://eslint.org/docs/rules/no-labels
     'no-labels': 'warn',
+
+    // Disallow unnecessary nested blocks
+    // https://eslint.org/docs/rules/no-lone-blocks
     'no-lone-blocks': 'error',
+
+    // Disallow functions in loops
+    // https://eslint.org/docs/rules/no-loop-func
     'no-loop-func': 'error',
-    'no-mixed-requires': 'error',
+
+    // Disallow new For Side Effects
+    // https://eslint.org/docs/rules/no-new
     'no-new': 'error',
+
+    // Disallow function constructors
+    // https://eslint.org/docs/rules/no-new-func
     'no-new-func': 'error',
-    'no-new-require': 'warn', // Documentation needed
+
+    // Disallow Primitive Wrapper Instances
+    // https://eslint.org/docs/rules/no-new-wrappers
     'no-new-wrappers': 'error',
-    'no-path-concat': 'warn',
+
+    // Disallow use of __proto__
+    // https://eslint.org/docs/rules/no-proto
     'no-proto': 'error',
+
     'no-script-url': 'error',
     'no-void': 'error',
     'prefer-promise-reject-errors': 'warn',
