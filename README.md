@@ -167,7 +167,7 @@ etc.).
 An exception to the above rule are bugs. It is generally good software
 engineering practice to fix a bug as soon as you spot one. See ID Software's
 [programming principles](https://www.youtube.com/watch?v=KFziBfvAFnM) and the
-[Broken Window Theory](https://en.wikipedia.org/wiki/Broken_windows_theory)
+[Broken Window Theory](https://en.wikipedia.org/wiki/Broken_windows_theory).
 
 ### Variables
 
