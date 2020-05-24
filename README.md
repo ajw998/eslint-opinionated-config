@@ -8,7 +8,7 @@ In your `.eslintrc`, add the following:
 
 ```js
 { 
-    extends: '@ajw998/eslint-config'
+    extends: '@ajw998/eslint-config/.eslintrc.js'
 }
 ```
 
